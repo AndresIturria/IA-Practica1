@@ -5,7 +5,10 @@ piezaBlanca(X):-peonBlanco(X).
 piezaBlanca(X):-caballoBlanco(X).
 piezaNegra(X):-peonNegro(X).
 piezaNegra(X):-caballoNegro(X).
+caballo(X):-caballoNegro(X).
+caballo(X):-caballoBlanco(X).
 
+%Peones Blancos.
 %Mover peon 1 espacio hacia adelante
 mover(Peon,Xo,Yo,Xf,Yf):-
 	peonBlanco(Peon),
@@ -40,7 +43,7 @@ mover(Peon,Xo,Yo,Xf,Yf):-
 	Yf is Yo+1.
 
 
-%peones negros
+%Peones negros
 
 %Mover peon 1 espacio hacia adelante
 mover(Peon,Xo,Yo,Xf,Yf):-
@@ -78,6 +81,9 @@ mover(Peon,Xo,Yo,Xf,Yf):-
 
 %Caballos
 
+%Caballos blancos
+
+%Mover 2 espacios en vertical y uno horizontal.
 mover(K,Xo,Yo,Xf,Yf):-
 	caballoBlanco(K),
 	casilla(K,Xo,Yo),
@@ -85,6 +91,7 @@ mover(K,Xo,Yo,Xf,Yf):-
 	(Xf is Xo + 1 ; Xf is Xo -1),
 	(Yf is Yo + 2 ; Yf is Yo -2).
 
+%Mover 2 espacios en horizontal y uno en vertical.
 mover(K,Xo,Yo,Xf,Yf):-
 	caballoBlanco(K),
 	casilla(K,Xo,Yo),
@@ -92,6 +99,23 @@ mover(K,Xo,Yo,Xf,Yf):-
 	(Xf is Xo + 2 ; Xf is Xo -2),
 	(Yf is Yo + 1 ; Yf is Yo -1).
 
+%Caballos Negros
+
+%Mover 2 espacios en vertical y uno horizontal.
+mover(K,Xo,Yo,Xf,Yf):-
+	caballoNegro(K),
+	casilla(K,Xo,Yo),
+	(casilla(v,Xf,Yf) ; piezaBlanca(X), casilla(X,Xf,Yf)),
+	(Xf is Xo + 1 ; Xf is Xo -1),
+	(Yf is Yo + 2 ; Yf is Yo -2).
+
+%Mover 2 espacios en horizontal y uno en vertical.
+mover(K,Xo,Yo,Xf,Yf):-
+	caballoNegro(K),
+	casilla(K,Xo,Yo),
+	(casilla(v,Xf,Yf) ; piezaBlanca(X), casilla(X,Xf,Yf)),
+	(Xf is Xo + 2 ; Xf is Xo -2),
+	(Yf is Yo + 1 ; Yf is Yo -1).
 
 %facts
 
