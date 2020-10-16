@@ -131,7 +131,7 @@ casilla(pb1,1,2).
 casilla(v,1,3).
 casilla(v,1,4).
 casilla(v,1,5).
-casilla(k,2,1).
+casilla(v,2,1).
 casilla(pb2,2,2).
 casilla(v,2,3).
 casilla(pn1,2,4).
