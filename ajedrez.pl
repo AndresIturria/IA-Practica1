@@ -5,8 +5,7 @@ piezaBlanca(X):-peonBlanco(X).
 piezaBlanca(X):-caballoBlanco(X).
 piezaNegra(X):-peonNegro(X).
 piezaNegra(X):-caballoNegro(X).
-caballo(X):-caballoNegro(X).
-caballo(X):-caballoBlanco(X).
+
 
 %Peones Blancos.
 %Mover peon 1 espacio hacia adelante
