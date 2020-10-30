@@ -1,6 +1,6 @@
 # Ajedrez
 
-
+El programa ajedrez.pl comprobará los movimientos válidos y te dirá todos los movimientos posibles dado un estado del tablero.
 
 Para hacer más simple este ejemplo se usará un tablero de 5x5 representado con coordenadas (X,Y).
 
@@ -45,3 +45,8 @@ en su camino.
 5. Un caballo puede atravesar piezas en su camino.
 
 6. Un caballo no puede terminar su movimiento en una casilla con piezas aliadas, si lo puede hacer si la pieza es enemiga.
+
+
+## Modelo Conceptual de entidades
+
+![Diagrama](Diagrama.png)
