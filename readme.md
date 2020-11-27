@@ -1,3 +1,5 @@
+![Licencia CC](LicenciaCC.png)
+
 # Ajedrez
 
 El programa ajedrez.pl comprobará los movimientos válidos y te dirá todos los movimientos posibles dado un estado del tablero.
